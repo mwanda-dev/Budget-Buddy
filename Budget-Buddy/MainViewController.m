@@ -22,6 +22,12 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self fetchExpenses];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(expenseAdded:) name:@"ExpenseAdded" object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -77,6 +83,13 @@
         [self fetchExpenses];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+}
+
+#pragma mark - Notification Handler
+
+- (void)expenseAdded:(NSNotification *)notification {
+    [self fetchExpenses];
+    [self.tableView reloadData];
 }
 
 @end

@@ -24,6 +24,8 @@
     
     [[CoreDataManager sharedManager] addExpenseWithAmount:amount category:category date:date notes:notes];
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ExpenseAdded" object:nil];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
