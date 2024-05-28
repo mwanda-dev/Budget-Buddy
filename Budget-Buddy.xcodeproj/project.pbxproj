@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6184E3F62C05CF56008F52B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E3F52C05CF56008F52B7 /* AppDelegate.m */; };
+		6184E3F92C05CF56008F52B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E3F82C05CF56008F52B7 /* SceneDelegate.m */; };
+		6184E3FC2C05CF56008F52B7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E3FB2C05CF56008F52B7 /* MainViewController.m */; };
+		6184E3FF2C05CF56008F52B7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6184E3FE2C05CF56008F52B7 /* Base */; };
+		6184E4022C05CF56008F52B7 /* Budget_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4002C05CF56008F52B7 /* Budget_Buddy.xcdatamodeld */; };
+		6184E4042C05CF59008F52B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6184E4032C05CF59008F52B7 /* Assets.xcassets */; };
+		6184E4072C05CF59008F52B7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6184E4062C05CF59008F52B7 /* Base */; };
+		6184E40A2C05CF59008F52B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4092C05CF59008F52B7 /* main.m */; };
+		6184E4142C05CF59008F52B7 /* Budget_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4132C05CF59008F52B7 /* Budget_BuddyTests.m */; };
+		6184E41E2C05CF59008F52B7 /* Budget_BuddyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E41D2C05CF59008F52B7 /* Budget_BuddyUITests.m */; };
+		6184E4202C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E41F2C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m */; };
+		6184E4342C05D6F1008F52B7 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4332C05D6F1008F52B7 /* CoreDataManager.m */; };
+		6184E4372C05D973008F52B7 /* AddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4362C05D973008F52B7 /* AddExpenseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6184E4102C05CF59008F52B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6184E3E92C05CF56008F52B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6184E3F02C05CF56008F52B7;
+			remoteInfo = "Budget-Buddy";
+		};
+		6184E41A2C05CF59008F52B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6184E3E92C05CF56008F52B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6184E3F02C05CF56008F52B7;
+			remoteInfo = "Budget-Buddy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6184E3F12C05CF56008F52B7 /* Budget-Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget-Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6184E3F42C05CF56008F52B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6184E3F52C05CF56008F52B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6184E3F72C05CF56008F52B7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		6184E3F82C05CF56008F52B7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		6184E3FA2C05CF56008F52B7 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6184E3FB2C05CF56008F52B7 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6184E3FE2C05CF56008F52B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6184E4012C05CF56008F52B7 /* Budget_Buddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Budget_Buddy.xcdatamodel; sourceTree = "<group>"; };
+		6184E4032C05CF59008F52B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6184E4062C05CF59008F52B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6184E4082C05CF59008F52B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6184E4092C05CF59008F52B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6184E40F2C05CF59008F52B7 /* Budget-BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget-BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6184E4132C05CF59008F52B7 /* Budget_BuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Budget_BuddyTests.m; sourceTree = "<group>"; };
+		6184E4192C05CF59008F52B7 /* Budget-BuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget-BuddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6184E41D2C05CF59008F52B7 /* Budget_BuddyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Budget_BuddyUITests.m; sourceTree = "<group>"; };
+		6184E41F2C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Budget_BuddyUITestsLaunchTests.m; sourceTree = "<group>"; };
+		6184E4322C05D69C008F52B7 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		6184E4332C05D6F1008F52B7 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		6184E4352C05D8A7008F52B7 /* AddExpenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddExpenseViewController.h; sourceTree = "<group>"; };
+		6184E4362C05D973008F52B7 /* AddExpenseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddExpenseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6184E3EE2C05CF56008F52B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6184E40C2C05CF59008F52B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6184E4162C05CF59008F52B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6184E3E82C05CF56008F52B7 = {
+			isa = PBXGroup;
+			children = (
+				6184E3F32C05CF56008F52B7 /* Budget-Buddy */,
+				6184E4122C05CF59008F52B7 /* Budget-BuddyTests */,
+				6184E41C2C05CF59008F52B7 /* Budget-BuddyUITests */,
+				6184E3F22C05CF56008F52B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6184E3F22C05CF56008F52B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6184E3F12C05CF56008F52B7 /* Budget-Buddy.app */,
+				6184E40F2C05CF59008F52B7 /* Budget-BuddyTests.xctest */,
+				6184E4192C05CF59008F52B7 /* Budget-BuddyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6184E3F32C05CF56008F52B7 /* Budget-Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				6184E3F42C05CF56008F52B7 /* AppDelegate.h */,
+				6184E3F52C05CF56008F52B7 /* AppDelegate.m */,
+				6184E3F72C05CF56008F52B7 /* SceneDelegate.h */,
+				6184E3F82C05CF56008F52B7 /* SceneDelegate.m */,
+				6184E3FA2C05CF56008F52B7 /* MainViewController.h */,
+				6184E3FB2C05CF56008F52B7 /* MainViewController.m */,
+				6184E4362C05D973008F52B7 /* AddExpenseViewController.m */,
+				6184E4352C05D8A7008F52B7 /* AddExpenseViewController.h */,
+				6184E3FD2C05CF56008F52B7 /* Main.storyboard */,
+				6184E4322C05D69C008F52B7 /* CoreDataManager.h */,
+				6184E4332C05D6F1008F52B7 /* CoreDataManager.m */,
+				6184E4032C05CF59008F52B7 /* Assets.xcassets */,
+				6184E4052C05CF59008F52B7 /* LaunchScreen.storyboard */,
+				6184E4082C05CF59008F52B7 /* Info.plist */,
+				6184E4092C05CF59008F52B7 /* main.m */,
+				6184E4002C05CF56008F52B7 /* Budget_Buddy.xcdatamodeld */,
+			);
+			path = "Budget-Buddy";
+			sourceTree = "<group>";
+		};
+		6184E4122C05CF59008F52B7 /* Budget-BuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				6184E4132C05CF59008F52B7 /* Budget_BuddyTests.m */,
+			);
+			path = "Budget-BuddyTests";
+			sourceTree = "<group>";
+		};
+		6184E41C2C05CF59008F52B7 /* Budget-BuddyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6184E41D2C05CF59008F52B7 /* Budget_BuddyUITests.m */,
+				6184E41F2C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m */,
+			);
+			path = "Budget-BuddyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6184E3F02C05CF56008F52B7 /* Budget-Buddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6184E4232C05CF59008F52B7 /* Build configuration list for PBXNativeTarget "Budget-Buddy" */;
+			buildPhases = (
+				6184E3ED2C05CF56008F52B7 /* Sources */,
+				6184E3EE2C05CF56008F52B7 /* Frameworks */,
+				6184E3EF2C05CF56008F52B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Budget-Buddy";
+			productName = "Budget-Buddy";
+			productReference = 6184E3F12C05CF56008F52B7 /* Budget-Buddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6184E40E2C05CF59008F52B7 /* Budget-BuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6184E4262C05CF59008F52B7 /* Build configuration list for PBXNativeTarget "Budget-BuddyTests" */;
+			buildPhases = (
+				6184E40B2C05CF59008F52B7 /* Sources */,
+				6184E40C2C05CF59008F52B7 /* Frameworks */,
+				6184E40D2C05CF59008F52B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6184E4112C05CF59008F52B7 /* PBXTargetDependency */,
+			);
+			name = "Budget-BuddyTests";
+			productName = "Budget-BuddyTests";
+			productReference = 6184E40F2C05CF59008F52B7 /* Budget-BuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6184E4182C05CF59008F52B7 /* Budget-BuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6184E4292C05CF59008F52B7 /* Build configuration list for PBXNativeTarget "Budget-BuddyUITests" */;
+			buildPhases = (
+				6184E4152C05CF59008F52B7 /* Sources */,
+				6184E4162C05CF59008F52B7 /* Frameworks */,
+				6184E4172C05CF59008F52B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6184E41B2C05CF59008F52B7 /* PBXTargetDependency */,
+			);
+			name = "Budget-BuddyUITests";
+			productName = "Budget-BuddyUITests";
+			productReference = 6184E4192C05CF59008F52B7 /* Budget-BuddyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6184E3E92C05CF56008F52B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					6184E3F02C05CF56008F52B7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					6184E40E2C05CF59008F52B7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 6184E3F02C05CF56008F52B7;
+					};
+					6184E4182C05CF59008F52B7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 6184E3F02C05CF56008F52B7;
+					};
+				};
+			};
+			buildConfigurationList = 6184E3EC2C05CF56008F52B7 /* Build configuration list for PBXProject "Budget-Buddy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6184E3E82C05CF56008F52B7;
+			productRefGroup = 6184E3F22C05CF56008F52B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6184E3F02C05CF56008F52B7 /* Budget-Buddy */,
+				6184E40E2C05CF59008F52B7 /* Budget-BuddyTests */,
+				6184E4182C05CF59008F52B7 /* Budget-BuddyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6184E3EF2C05CF56008F52B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6184E4042C05CF59008F52B7 /* Assets.xcassets in Resources */,
+				6184E4072C05CF59008F52B7 /* Base in Resources */,
+				6184E3FF2C05CF56008F52B7 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6184E40D2C05CF59008F52B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6184E4172C05CF59008F52B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6184E3ED2C05CF56008F52B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6184E4342C05D6F1008F52B7 /* CoreDataManager.m in Sources */,
+				6184E40A2C05CF59008F52B7 /* main.m in Sources */,
+				6184E3FC2C05CF56008F52B7 /* MainViewController.m in Sources */,
+				6184E3F62C05CF56008F52B7 /* AppDelegate.m in Sources */,
+				6184E3F92C05CF56008F52B7 /* SceneDelegate.m in Sources */,
+				6184E4372C05D973008F52B7 /* AddExpenseViewController.m in Sources */,
+				6184E4022C05CF56008F52B7 /* Budget_Buddy.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6184E40B2C05CF59008F52B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6184E4142C05CF59008F52B7 /* Budget_BuddyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6184E4152C05CF59008F52B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6184E4202C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m in Sources */,
+				6184E41E2C05CF59008F52B7 /* Budget_BuddyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6184E4112C05CF59008F52B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6184E3F02C05CF56008F52B7 /* Budget-Buddy */;
+			targetProxy = 6184E4102C05CF59008F52B7 /* PBXContainerItemProxy */;
+		};
+		6184E41B2C05CF59008F52B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6184E3F02C05CF56008F52B7 /* Budget-Buddy */;
+			targetProxy = 6184E41A2C05CF59008F52B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6184E3FD2C05CF56008F52B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6184E3FE2C05CF56008F52B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6184E4052C05CF59008F52B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6184E4062C05CF59008F52B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6184E4212C05CF59008F52B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6184E4222C05CF59008F52B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6184E4242C05CF59008F52B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Budget-Buddy/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwanda.Budget-Buddy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6184E4252C05CF59008F52B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Budget-Buddy/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwanda.Budget-Buddy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6184E4272C05CF59008F52B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwanda.Budget-BuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budget-Buddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Budget-Buddy";
+			};
+			name = Debug;
+		};
+		6184E4282C05CF59008F52B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwanda.Budget-BuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budget-Buddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Budget-Buddy";
+			};
+			name = Release;
+		};
+		6184E42A2C05CF59008F52B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwanda.Budget-BuddyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Budget-Buddy";
+			};
+			name = Debug;
+		};
+		6184E42B2C05CF59008F52B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwanda.Budget-BuddyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Budget-Buddy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6184E3EC2C05CF56008F52B7 /* Build configuration list for PBXProject "Budget-Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6184E4212C05CF59008F52B7 /* Debug */,
+				6184E4222C05CF59008F52B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6184E4232C05CF59008F52B7 /* Build configuration list for PBXNativeTarget "Budget-Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6184E4242C05CF59008F52B7 /* Debug */,
+				6184E4252C05CF59008F52B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6184E4262C05CF59008F52B7 /* Build configuration list for PBXNativeTarget "Budget-BuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6184E4272C05CF59008F52B7 /* Debug */,
+				6184E4282C05CF59008F52B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6184E4292C05CF59008F52B7 /* Build configuration list for PBXNativeTarget "Budget-BuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6184E42A2C05CF59008F52B7 /* Debug */,
+				6184E42B2C05CF59008F52B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6184E4002C05CF56008F52B7 /* Budget_Buddy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6184E4012C05CF56008F52B7 /* Budget_Buddy.xcdatamodel */,
+			);
+			currentVersion = 6184E4012C05CF56008F52B7 /* Budget_Buddy.xcdatamodel */;
+			path = Budget_Buddy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6184E3E92C05CF56008F52B7 /* Project object */;
+}
