@@ -8,6 +8,7 @@
 #import "Foundation/Foundation.h"
 #import "AddExpenseViewController.h"
 #import "CoreDataManager.h"
+#import "MainViewController.h"
 
 @implementation AddExpenseViewController
 
@@ -23,7 +24,7 @@
     
     [[CoreDataManager sharedManager] addExpenseWithAmount:amount category:category date:date notes:notes];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

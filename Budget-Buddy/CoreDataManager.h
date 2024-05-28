@@ -16,11 +16,6 @@
 - (void)saveContext;
 - (void)addExpenseWithAmount:(double)amount category:(NSString *)category date:(NSDate *)date notes:(NSString *)notes;
 - (NSArray *)fetchExpenses;
+- (void)deleteExpense:(NSManagedObject *)expense;
 
 @end
-
-#ifndef CoreDataManager_h
-#define CoreDataManager_h
-
-
-#endif /* CoreDataManager_h */

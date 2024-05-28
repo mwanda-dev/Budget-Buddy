@@ -24,11 +24,13 @@
     [self fetchExpenses];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self fetchExpenses];
     [self.tableView reloadData];
 }
+
+
 
 - (void)fetchExpenses {
     self.expenses = [[CoreDataManager sharedManager] fetchExpenses];
@@ -64,5 +66,17 @@
     [self performSegueWithIdentifier:@"addExpenseSegue" sender:self];
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSManagedObject *expenseToDelete = self.expenses[indexPath.row];
+        [[CoreDataManager sharedManager] deleteExpense:expenseToDelete];
+        [self fetchExpenses];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 
 @end

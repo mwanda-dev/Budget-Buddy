@@ -5,9 +5,9 @@
 //  Created by Mwanda Chipongo on 28/05/2024.
 //
 
-#import <Foundation/Foundation.h>
 #import "CoreDataManager.h"
 #import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 
 @implementation CoreDataManager
 
@@ -47,6 +47,10 @@
     [newExpense setValue:notes forKey:@"notes"];
     
     [self saveContext];
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Failed to save expense: %@", error);
+    }
 }
 
 - (NSArray *)fetchExpenses {
@@ -57,6 +61,16 @@
         NSLog(@"Error fetching expenses: %@", error.localizedDescription);
     }
     return result;
+}
+
+- (void)deleteExpense:(NSManagedObject *)expense {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    [context deleteObject:expense];
+        
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Failed to delete expense: %@", error);
+    }
 }
 
 @end

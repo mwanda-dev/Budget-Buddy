@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextView *notesTextView;
 
+- (IBAction)saveExpense:(id)sender;
+
 @end
