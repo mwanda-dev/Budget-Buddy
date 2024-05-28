@@ -43,7 +43,7 @@
     
     [newExpense setValue:@(amount) forKey:@"amount"];
     [newExpense setValue:category forKey:@"category"];
-    [newExpense setValue:date forKey:@"date"];
+    [newExpense setValue:date forKey:@"date"]; // Defaults to current date
     [newExpense setValue:notes forKey:@"notes"];
     
     [self saveContext];

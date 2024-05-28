@@ -68,7 +68,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Expense" titleAlignment="trailing"/>
                                 <connections>
-                                    <segue destination="lB5-BO-o4L" kind="presentation" identifier="addExpenseSegue" id="vMy-ms-9eP"/>
+                                    <segue destination="lB5-BO-o4L" kind="showDetail" identifier="addExpenseSegue" id="vMy-ms-9eP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNt-bg-D9N">
@@ -83,6 +83,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="M6s-Fg-CWG"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="rK5-zW-EZh" id="VQm-Up-kn0"/>
