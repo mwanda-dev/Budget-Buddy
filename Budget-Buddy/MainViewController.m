@@ -9,6 +9,7 @@
 #import "CoreDataManager.h"
 #import "AddExpenseViewController.h"
 #import "BudgetViewController.h"
+#import "ExpenseDetailsViewController.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -100,6 +101,19 @@
         [self fetchExpenses];
         [self fetchBudget];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showExpenseDetailsSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showExpenseDetailsSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSManagedObject *selectedExpense = self.expenses[indexPath.row];
+        ExpenseDetailsViewController *destinationVC = segue.destinationViewController;
+        destinationVC.expense = selectedExpense;
     }
 }
 
