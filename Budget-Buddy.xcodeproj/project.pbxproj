@@ -20,6 +20,7 @@
 		6184E4202C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E41F2C05CF59008F52B7 /* Budget_BuddyUITestsLaunchTests.m */; };
 		6184E4342C05D6F1008F52B7 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4332C05D6F1008F52B7 /* CoreDataManager.m */; };
 		6184E4372C05D973008F52B7 /* AddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E4362C05D973008F52B7 /* AddExpenseViewController.m */; };
+		61EC06822C07049700FA5419 /* BudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC06812C07049700FA5419 /* BudgetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		6184E4332C05D6F1008F52B7 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		6184E4352C05D8A7008F52B7 /* AddExpenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddExpenseViewController.h; sourceTree = "<group>"; };
 		6184E4362C05D973008F52B7 /* AddExpenseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddExpenseViewController.m; sourceTree = "<group>"; };
+		61EC06802C07047E00FA5419 /* BudgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BudgetViewController.h; sourceTree = "<group>"; };
+		61EC06812C07049700FA5419 /* BudgetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BudgetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				6184E3F82C05CF56008F52B7 /* SceneDelegate.m */,
 				6184E3FA2C05CF56008F52B7 /* MainViewController.h */,
 				6184E3FB2C05CF56008F52B7 /* MainViewController.m */,
+				61EC06802C07047E00FA5419 /* BudgetViewController.h */,
+				61EC06812C07049700FA5419 /* BudgetViewController.m */,
 				6184E4352C05D8A7008F52B7 /* AddExpenseViewController.h */,
 				6184E4362C05D973008F52B7 /* AddExpenseViewController.m */,
 				6184E3FD2C05CF56008F52B7 /* Main.storyboard */,
@@ -282,6 +287,7 @@
 				6184E4342C05D6F1008F52B7 /* CoreDataManager.m in Sources */,
 				6184E40A2C05CF59008F52B7 /* main.m in Sources */,
 				6184E3FC2C05CF56008F52B7 /* MainViewController.m in Sources */,
+				61EC06822C07049700FA5419 /* BudgetViewController.m in Sources */,
 				6184E3F62C05CF56008F52B7 /* AppDelegate.m in Sources */,
 				6184E3F92C05CF56008F52B7 /* SceneDelegate.m in Sources */,
 				6184E4372C05D973008F52B7 /* AddExpenseViewController.m in Sources */,

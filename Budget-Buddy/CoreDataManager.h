@@ -18,4 +18,8 @@
 - (NSArray *)fetchExpenses;
 - (void)deleteExpense:(NSManagedObject *)expense;
 
+- (void)createBudgetWithAmount:(double)amount;
+- (NSManagedObject *)fetchBudget;
+- (void)updateRemainingAmount:(double)amount;
+
 @end

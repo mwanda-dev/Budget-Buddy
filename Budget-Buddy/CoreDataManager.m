@@ -50,6 +50,8 @@
     NSError *error = nil;
     if (![context save:&error]) {
         NSLog(@"Failed to save expense: %@", error);
+    } else {
+        [self updateRemainingAmount:-amount];
     }
 }
 
@@ -65,11 +67,76 @@
 
 - (void)deleteExpense:(NSManagedObject *)expense {
     NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    double amount = [[expense valueForKey:@"amount"] doubleValue];
     [context deleteObject:expense];
         
     NSError *error = nil;
     if (![context save:&error]) {
         NSLog(@"Failed to delete expense: %@", error);
+    } else {
+        [self updateRemainingAmount:amount];
+    }
+}
+
+- (void)createBudgetWithAmount:(double)amount {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Budget"];
+    
+    NSError *error = nil;
+    NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"Failed to fetch budget: %@", error);
+        return;
+    }
+    
+    NSManagedObject *budget;
+    if (results.count > 0) {
+        budget = results.firstObject;
+        [budget setValue:@(amount) forKey:@"totalAmount"];
+        [budget setValue:@(amount) forKey:@"remainingAmount"];
+    } else {
+        budget = [NSEntityDescription insertNewObjectForEntityForName:@"Budget" inManagedObjectContext:context];
+        [budget setValue:@(amount) forKey:@"totalAmount"];
+        [budget setValue:@(amount) forKey:@"remainingAmount"];
+    }
+    
+    if (![context save:&error]) {
+        NSLog(@"Failed to save budget: %@", error);
+    }
+}
+
+- (NSManagedObject *)fetchBudget {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Budget"];
+    NSError *error = nil;
+    NSArray *results = [self.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"Failed to fetch budget: %@", error);
+        return nil;
+    }
+    
+    return results.firstObject;
+}
+
+- (void)updateRemainingAmount:(double)amount {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Budget"];
+    
+    NSError *error = nil;
+    NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"Failed to fetch budget: %@", error);
+        return;
+    }
+    
+    if (results.count >= 0) {
+        NSManagedObject *budget = results.firstObject;
+        double remainingAmount = [[budget valueForKey:@"remainingAmount"] doubleValue];
+        remainingAmount += amount;
+        [budget setValue:@(remainingAmount) forKey:@"remainingAmount"];
+        
+        if (![context save:&error]) {
+            NSLog(@"Failed to update remaining amount: %@", error);
+        }
     }
 }
 
