@@ -50,7 +50,7 @@
     NSManagedObject *budget = [[CoreDataManager sharedManager] fetchBudget];
     if (budget) {
         double remainingAmount = [[budget valueForKey:@"remainingAmount"] doubleValue];
-        self.remainingBudgetLabel.text = [NSString stringWithFormat:@"Remaining Budget: K%.2f", remainingAmount];
+        self.remainingBudgetLabel.text = [NSString stringWithFormat:@"K%.2f", remainingAmount];
     } else {
         self.remainingBudgetLabel.text = @"K0.00";
     }
