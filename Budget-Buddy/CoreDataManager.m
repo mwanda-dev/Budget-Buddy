@@ -28,6 +28,11 @@
     return self;
 }
 
+- (NSManagedObjectContext *)managedObjectContext {
+    // Implement the Core Data stack here
+    return self.persistentContainer.viewContext;
+}
+
 - (void)saveContext {
     NSManagedObjectContext *context = self.persistentContainer.viewContext;
     NSError *error = nil;
@@ -35,6 +40,35 @@
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
+}
+
+- (void)saveUserWithUsername:(NSString *)username passwordHash:(NSString *)passwordHash useBiometrics:(BOOL)useBiometrics {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    [newUser setValue:username forKey:@"username"];
+    [newUser setValue:passwordHash forKey:@"passwordHash"];
+    [newUser setValue:@(useBiometrics) forKey:@"useBiometrics"];
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Failed to save user: %@", error.localizedDescription);
+    }
+}
+
+- (BOOL)validateUserWithUsername:(NSString *)username passwordHash:(NSString *)passwordHash {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"username == %@ AND passwordHash == %@", username, passwordHash];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *results = [context executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"Failed to fetch user: %@", error.localizedDescription);
+        return NO;
+    }
+    
+    return results.count > 0;
 }
 
 - (void)addExpenseWithAmount:(double)amount category:(NSString *)category date:(NSDate *)date notes:(NSString *)notes {

@@ -22,4 +22,7 @@
 - (NSManagedObject *)fetchBudget;
 - (void)updateRemainingAmount:(double)amount;
 
+- (void)saveUserWithUsername:(NSString *)username passwordHash:(NSString *)passwordHash useBiometrics:(BOOL)useBiometrics;
+- (BOOL)validateUserWithUsername:(NSString *)username passwordHash:(NSString *)passwordHash;
+
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610BFEA72C09DF2100592804 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610BFEA62C09DF2100592804 /* SignUpViewController.m */; };
+		610BFEAA2C09DFE500592804 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610BFEA92C09DFE500592804 /* LoginViewController.m */; };
 		616380F22C072B2A00E237FA /* ExpenseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 616380F12C072B2A00E237FA /* ExpenseDetailsViewController.m */; };
 		6184E3F62C05CF56008F52B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E3F52C05CF56008F52B7 /* AppDelegate.m */; };
 		6184E3F92C05CF56008F52B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6184E3F82C05CF56008F52B7 /* SceneDelegate.m */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		610BFEA52C09DEEB00592804 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		610BFEA62C09DF2100592804 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		610BFEA82C09DFA800592804 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		610BFEA92C09DFE500592804 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		616380F02C072B2A00E237FA /* ExpenseDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpenseDetailsViewController.h; sourceTree = "<group>"; };
 		616380F12C072B2A00E237FA /* ExpenseDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpenseDetailsViewController.m; sourceTree = "<group>"; };
 		6184E3F12C05CF56008F52B7 /* Budget-Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget-Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,10 @@
 				6184E4362C05D973008F52B7 /* AddExpenseViewController.m */,
 				6184E4322C05D69C008F52B7 /* CoreDataManager.h */,
 				6184E4332C05D6F1008F52B7 /* CoreDataManager.m */,
+				610BFEA52C09DEEB00592804 /* SignUpViewController.h */,
+				610BFEA62C09DF2100592804 /* SignUpViewController.m */,
+				610BFEA82C09DFA800592804 /* LoginViewController.h */,
+				610BFEA92C09DFE500592804 /* LoginViewController.m */,
 				6184E3FD2C05CF56008F52B7 /* Main.storyboard */,
 				6184E4032C05CF59008F52B7 /* Assets.xcassets */,
 				6184E4052C05CF59008F52B7 /* LaunchScreen.storyboard */,
@@ -295,8 +305,10 @@
 				61EC06822C07049700FA5419 /* BudgetViewController.m in Sources */,
 				6184E3F62C05CF56008F52B7 /* AppDelegate.m in Sources */,
 				616380F22C072B2A00E237FA /* ExpenseDetailsViewController.m in Sources */,
+				610BFEA72C09DF2100592804 /* SignUpViewController.m in Sources */,
 				6184E3F92C05CF56008F52B7 /* SceneDelegate.m in Sources */,
 				6184E4372C05D973008F52B7 /* AddExpenseViewController.m in Sources */,
+				610BFEAA2C09DFE500592804 /* LoginViewController.m in Sources */,
 				6184E4022C05CF56008F52B7 /* Budget_Buddy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,7 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
