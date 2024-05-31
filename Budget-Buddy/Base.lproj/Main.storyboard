@@ -258,6 +258,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log in with Biometrics"/>
+                                <connections>
+                                    <action selector="biometricLoginButtonTapped:" destination="7K1-pP-4MJ" eventType="touchUpInside" id="70o-Cu-7J9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dont have have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-d8-8pZ">
                                 <rect key="frame" x="32" y="743" width="215" height="21"/>

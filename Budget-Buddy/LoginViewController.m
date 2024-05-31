@@ -5,7 +5,6 @@
 //  Created by Mwanda Chipongo on 31/05/2024.
 //
 
-#import <Foundation/Foundation.h>
 #import "LoginViewController.h"
 #import "CoreDataManager.h"
 #import <CommonCrypto/CommonCrypto.h>
@@ -25,7 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupBiometricButton];
     self.passwordTextField.secureTextEntry = YES;
+}
+
+- (void)setupBiometricButton {
+    LAContext *context = [[LAContext alloc] init];
+    NSError *error = nil;
+
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+        self.biometricLoginButton.hidden = NO;
+    } else {
+        self.biometricLoginButton.hidden = YES;
+    }
 }
 
 - (IBAction)loginButtonTapped:(id)sender {
@@ -54,16 +65,19 @@
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:@"Log in with Face ID / Touch ID"
+                localizedReason:@"Log in with Face ID / Touch ID."
                           reply:^(BOOL success, NSError * _Nullable error) {
             if (success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     // Navigate to the main screen
                     self.feedbackLabel.text = @"Login successful";
+                    NSLog(@"Biometric Login Succesful");
+                    [self performSegueWithIdentifier:@"successfulLoginSegue" sender:self];
                 });
             } else {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.feedbackLabel.text = @"Biometric login failed";
+                    NSLog(@"Biometric login failed");
                 });
             }
         }];
