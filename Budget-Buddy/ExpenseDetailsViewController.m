@@ -26,7 +26,7 @@
 - (void)displayExpenseDetails {
     if (self.expense) {
         self.categoryLabel.text = [self.expense valueForKey:@"category"];
-        self.amountLabel.text = [NSString stringWithFormat:@"$%.2f", [[self.expense valueForKey:@"amount"] doubleValue]];
+        self.amountLabel.text = [NSString stringWithFormat:@"K%.2f", [[self.expense valueForKey:@"amount"] doubleValue]];
 
         NSDate *date = [self.expense valueForKey:@"date"];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
