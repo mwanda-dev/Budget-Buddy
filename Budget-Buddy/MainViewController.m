@@ -56,6 +56,7 @@
     }
 }
 
+
 #pragma mark - Table View Data Source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -64,10 +65,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExpenseCell" forIndexPath:indexPath];
+    // These are the rows each expense will be displayed in
     
     NSManagedObject *expense = self.expenses[indexPath.row];
     
     UILabel *categoryLabel = [cell viewWithTag:1];
+    // The view tag represents the column number in each row in the table
     categoryLabel.text = [expense valueForKey:@"category"];
         
     UILabel *amountLabel = [cell viewWithTag:2];
@@ -84,10 +87,12 @@
 
 - (IBAction)addExpenseButtonTapped:(id)sender {
     [self performSegueWithIdentifier:@"addExpenseSegue" sender:self];
+    // When the add expense button is tapped, it'll present the add expense interface as a pop up
 }
 
 - (IBAction)setBudgetButtonTapped:(id)sender {
     [self performSegueWithIdentifier:@"setBudgetSegue" sender:self];
+    // When the set budget button is tapped, it'll present the set budget interface as a pop up
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -114,10 +119,13 @@
         NSManagedObject *selectedExpense = self.expenses[indexPath.row];
         ExpenseDetailsViewController *destinationVC = segue.destinationViewController;
         destinationVC.expense = selectedExpense;
+        // This method sends the selected expense to the Expense Details View Controller so that it can be displayed
     }
 }
 
 #pragma mark - Notification Handler
+// These notification handlers listen for notifications from the AddExpense and Budget View Controllers so that the main view
+// controller is immediately updated when an expense is added or a budget is set
 
 - (void)budgetUpdated:(NSNotification *)notification {
     NSLog(@"Budget Updated");

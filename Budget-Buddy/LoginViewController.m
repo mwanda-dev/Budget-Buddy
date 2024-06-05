@@ -34,6 +34,7 @@
 
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         self.biometricLoginButton.hidden = NO;
+        // Hides the biometric login button if it hasn't been enrolled or isn't available on the device
     } else {
         self.biometricLoginButton.hidden = YES;
     }
@@ -48,11 +49,11 @@
     BOOL success = [[CoreDataManager sharedManager] validateUserWithUsername:username passwordHash:passwordHash];
     
     if (success) {
-        // Navigate to the main screen
         [self.feedbackLabel setTextColor:_greenColor];
         [self.feedbackLabel setText:@"Login successful"];
         [NSThread sleepForTimeInterval:4]; // wait for 4 seconds
         [self performSegueWithIdentifier:@"successfulLoginSegue" sender:self];
+        // When the login is successful it navigates to the Main View Controller
         
     } else {
         self.feedbackLabel.text = @"Invalid username or password";
@@ -68,7 +69,8 @@
                 localizedReason:@"Log in with Face ID / Touch ID."
                           reply:^(BOOL success, NSError * _Nullable error) {
             if (success) {
-                dispatch_async(dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(),
+                               ^{
                     // Navigate to the main screen
                     self.feedbackLabel.text = @"Login successful";
                     NSLog(@"Biometric Login Succesful");

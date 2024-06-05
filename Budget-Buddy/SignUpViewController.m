@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *biometricSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *feedbackLabel;
 @property(nonatomic, strong) UIColor *greenColor;
+// These properties each connect to a specified component in the Sign Up View
 
 @end
 
@@ -24,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.passwordTextField.secureTextEntry = YES;
+    self.passwordTextField.secureTextEntry = YES; // Ensures that the password isn't visible to the user when it is being typed
 }
 
 - (IBAction)signUpButtonTapped:(id)sender {
@@ -48,18 +49,20 @@
     // Show success message or navigate to login screen
     [self.feedbackLabel setTextColor:_greenColor];
     [self.feedbackLabel setText:@"Sign up successful"];
-    [NSThread sleepForTimeInterval:4]; // wait for 2.2 seconds
+    [NSThread sleepForTimeInterval:4]; // wait for 4 seconds
     [self performSegueWithIdentifier:@"successfulSignUpSegue" sender:self];
+    // This function receives a username and password from the user input in the text fields in the Sign Up View Controller
+    // The successful signup segue then takes them to the login screen
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
-    // Add your validation logic here
     return username.length > 3;
+    // Ensures usernames are 4 or more characters long
 }
 
 - (BOOL)isValidPassword:(NSString *)password {
-    // Add your validation logic here
-    return password.length > 6;
+    return password.length > 7;
+    // Ensure passwords are 8 or more characters long
 }
 
 - (NSString *)hashPassword:(NSString *)password {
@@ -75,6 +78,8 @@
     }
     
     return output;
+    // This function generates a hash of the password entered
+    // This hash is stored as part of the user entity
 }
 
 @end
