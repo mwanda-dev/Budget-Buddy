@@ -26,6 +26,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"BudgetUpdated" object:nil];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    // Saves a entered budget
 }
 
 @end

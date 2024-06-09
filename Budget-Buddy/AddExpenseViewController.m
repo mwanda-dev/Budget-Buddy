@@ -27,6 +27,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ExpenseAdded" object:nil];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    // Saves and expense to persistent storage
 }
 
 @end

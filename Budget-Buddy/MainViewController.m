@@ -97,6 +97,7 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
+    // This is the editing style that is built in to enable deletion of cells or row in a table view
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -107,6 +108,7 @@
         [self fetchBudget];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+    // This method enables the deletion of an expense by sliding the expense to the left
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,6 +132,7 @@
 - (void)budgetUpdated:(NSNotification *)notification {
     NSLog(@"Budget Updated");
     [self fetchBudget];
+    [self.tableView reloadData];
 }
 
 - (void)expenseAdded:(NSNotification *)notification {

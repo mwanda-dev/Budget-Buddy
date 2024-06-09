@@ -34,9 +34,9 @@
 
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         self.biometricLoginButton.hidden = NO;
-        // Hides the biometric login button if it hasn't been enrolled or isn't available on the device
     } else {
         self.biometricLoginButton.hidden = YES;
+        // Hides the biometric login button if it hasn't been enrolled or isn't available on the device
     }
 }
 
@@ -58,6 +58,8 @@
     } else {
         self.feedbackLabel.text = @"Invalid username or password";
     }
+    // This function takes the text from the text fields and validates the username and password of a user
+    // When a success message is received from the shared manager, it performs the successfulLoginSegu to the Main View Controller
 }
 
 - (IBAction)biometricLoginButtonTapped:(id)sender {
@@ -71,7 +73,6 @@
             if (success) {
                 dispatch_async(dispatch_get_main_queue(),
                                ^{
-                    // Navigate to the main screen
                     self.feedbackLabel.text = @"Login successful";
                     NSLog(@"Biometric Login Succesful");
                     [self performSegueWithIdentifier:@"successfulLoginSegue" sender:self];
@@ -82,6 +83,8 @@
                     NSLog(@"Biometric login failed");
                 });
             }
+            // This method calls the built in biometric authentication function available on the device and waits until the authentication returns
+            // a success message or an error message in the case of a failed login.
         }];
     } else {
         self.feedbackLabel.text = @"Biometric login not available";
@@ -101,6 +104,8 @@
     }
     
     return output;
+    // This function hashes the entered password so that it is compared to the stored hash that is available
+    
 }
 
 @end

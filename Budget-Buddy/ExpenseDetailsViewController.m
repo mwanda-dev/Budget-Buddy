@@ -35,6 +35,7 @@
 
         self.notesLabel.text = [self.expense valueForKey:@"notes"];
     }
+    // Displays the details of a selected expense
 }
 
 
